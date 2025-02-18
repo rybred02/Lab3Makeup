@@ -1,4 +1,7 @@
+
+
 void setup() {
+pinMode(LED_BUILTIN, OUTPUT);
   // put your setup code here, to run once:
 pinMode(A6, INPUT);
 int lightLevel = analogRead(A6);
@@ -15,6 +18,10 @@ else if (lightLevel < 700) {
 }
 else if (lightLevel < 1024) {
   Serial.println("It's really bright!");
+}
+if (lightLevel < 100){
+
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 }
 
